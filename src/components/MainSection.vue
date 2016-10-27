@@ -22,10 +22,10 @@
     <div class="example" v-if="legislator.party === '民主進步黨'">
       <h2>參考通話內容（點選可編輯）</h2>
       <p contenteditable>
-        你好，請問是 {{legislator.name}} 委員的辦公室嗎？我是 {{selectedDistrict}} 的選民，我想要表達選民意見。吳秉叡委員開記者會時說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」，請你轉告 {{legislator.name}} 委員，如果委員不公開反對一例一休、<strong>砍七天假</strong> 的勞基法修法版本，我以後選舉絕對不會投給你，如果有人發動罷免我也會去投贊成票。請委員認真考慮選民的意見，公開反對<strong>一例一休、砍七天假</strong>
+        你好，請問是 <strong>{{legislator.name}}</strong> 委員的辦公室嗎？我是 {{selectedDistrict}} 的選民，我想要表達選民意見。吳秉叡委員開記者會時說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」，請你轉告 <strong>{{legislator.name}}</strong> 委員，如果委員不公開反對一例一休、<strong>砍七天假</strong> 的勞基法修法版本，我以後選舉絕對不會投給你，如果有人發動罷免我也會去投贊成票。請委員認真考慮選民的意見，公開反對<strong>一例一休、砍七天假</strong>
       </p>
     </div>
-    <div class="footer">回報臭蟲 | GitHub project</div>
+    <div class="footer"><a href="https://github.com/7holidays/7holidays.github.io/issues">回報臭蟲</a> | <a href="https://github.com/7holidays/7holidays.github.io">GitHub project</a> | <a href="https://g0v.hackpad.com/ep/pad/static/t5nla4R4Dft" target="_blank">資料來源：立委咖電喂</a></div>
   </div>
 </template>
 
