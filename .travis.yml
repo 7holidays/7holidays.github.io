@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '6'
+env:
+  global:
+  - GH_REF=github.com/7holidays/7holidays.github.io.git
+  # GH_TOKEN
+  - secure: "ZP8g26wU9YIP/pSCAxYKsji8t2Vxbd15KHxR2uwm98a628KHRJc3vfesgQcVeQ7M0WkOwhFBVOAl9hNQrh/dMubOIEBIIiLCs6OxeX0KzDaM/BgVWC4haAZMYBpaKRjb2jdGUZ/SgZwKQGQardZwOmaszp9d6nyoCYapZx6J3raVd19wiEZ/5pESP5KC0dNgBRn7/3OyneVKJRENmbmmv7ZhXHpxVQOaB83spBUdCGZTAOX6/hUdfU1ud3dbzlYtJ7C4fGmchnqpZms9qw7dqCZddEQV96ZYvHco9nbyyXIjTZOgiGBwmh8nZ4mAsJGf0CB+YYJJ7xfT1gndhc9qYjZdUZ7+jgPmFf0FqC5nq7R1ab7u+yCMrkVvlxsa+KxrqRZ4y+qOnKACFI1Nv74THN9GdfMQc0CbCbpv7rFtbU0h0Yh6bhaiUgaUsWurKrLIjnSKhTLirD6L1amzSfNNsjE63uDKh8TQ97njd7SZtj0SKTb3Euw+tvnC1dSTfAkA2ZzRXDpwS9knJxwpY4KJfaV34VYig+Hdrls5A134aLWva5Pa91xjbIO/G0Iusy2q75wSw6AYleAViOi8+pPvSVtcEvSQu2fnH8uwgCwr+8bkm85oaHMrS9/9jAuDUeliyepfW4uFV1aoGcNDHcZc5Z0Sr0pj9yzLfFp/yvjI2po="
+
+cache: node_modules
+
+script:
+  - npm run build
+
+after_success: npm run deploy
