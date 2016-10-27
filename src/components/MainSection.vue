@@ -42,9 +42,10 @@ export default {
              empty;
     },
     districts() {
+      this.selectedDistrict = '';
       return this.legislators[this.selectedCity] ?
              Object.keys(this.legislators[this.selectedCity]) :
-             '';
+             [];
     },
   },
   data() {
