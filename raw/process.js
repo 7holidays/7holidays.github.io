@@ -11,9 +11,16 @@ converter.fromFile(csvFile, (err, data) => {
 
   const obj = {};
   data.forEach((item) => {
-    if (item.areaName === '全國不分區' || item.areaName.indexOf('原住民') !== -1) return;
+    if (item.areaName.indexOf('原住民') !== -1) 
+      return;
 
-    const city = item.areaName.substr(0, 3);
+    var city = '';
+    if (item.areaName === '全國不分區') {
+      city = item.areaName;
+    } else {
+      city = item.areaName.substr(0, 3);
+    }
+
     if (!obj[city]) {
       obj[city] = {};
     }
