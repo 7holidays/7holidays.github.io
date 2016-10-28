@@ -18,7 +18,8 @@
   "dependencies": {
     "csvtojson": "^1.0.3",
     "shelljs": "^0.7.5",
-    "vue": "^2.0.1"
+    "vue": "^2.0.1",
+    "vue-disqus": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",

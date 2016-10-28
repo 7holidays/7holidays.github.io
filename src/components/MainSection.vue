@@ -52,6 +52,13 @@
         </p>
       </div>
     </div>
+    <div class="comments">
+      <h2>剛打完電話？分享一下經驗吧！</h2>
+      <p>
+        立委辦公室如何回應你呢？分享一下你的經驗或秘訣給其他朋友吧！
+      </p>
+      <disqus shortname="7holidays"></disqus>
+    </div>
     <div class="footer">
       <a href="https://github.com/7holidays/7holidays.github.io/issues" target="_blank">回報臭蟲</a> |
       <a href="https://github.com/7holidays/7holidays.github.io" target="_blank">GitHub project</a> |
@@ -62,10 +69,12 @@
 </template>
 
 <script>
+import Disqus from 'vue-disqus';
 import legislators from '../legislators.json';
 
 export default {
   name: 'main-section',
+  components: { Disqus },
   computed: {
     legislator() {
       let legislator = { name: '' };
@@ -140,7 +149,8 @@ strong {
   padding: 50px;
 }
 
-.example {
+.comments {
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -158,7 +168,6 @@ strong {
 
 .no-phone {
   margin-top: 20px;
-  margin-bottom: 50px;
 }
 
 .legislator {
