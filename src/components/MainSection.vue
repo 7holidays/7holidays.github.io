@@ -18,6 +18,18 @@
       </div>
     </form>
     <h2>你的選區立委是</h2>
+    <div class="legislator-selector" v-if="legislatorsInDistrict.length > 1">
+      <p>
+        你的選區有 {{legislatorsInDistrict.length}} 位立委，請選擇：
+        <form class="form-inline">
+          <div class="form-group">
+            <select class="form-control" v-model="legislatorIndex">
+              <option v-for="(legislator, index) in legislatorsInDistrict" :value="index">{{legislator.name}}</option>
+            </select>
+          </div>
+        </form>
+      </p>
+    </div>
     <div class="legislator">
       <div class="legislator-name">{{legislator.name}}</div>
       <div class="legislator-phone"><a :href="'tel:' + legislator.labTel">{{legislator.labTel}}</a></div>
@@ -56,10 +68,21 @@ export default {
   name: 'main-section',
   computed: {
     legislator() {
-      const empty = { name: '' };
-      return this.legislators[this.selectedCity] ?
-             this.legislators[this.selectedCity][this.selectedDistrict] || empty :
-             empty;
+      let legislator = { name: '' };
+      if (this.legislatorsInDistrict.length === 1) {
+        legislator = this.legislatorsInDistrict[0];
+      } else if (this.legislatorsInDistrict.length > 1) {
+        legislator = this.legislatorsInDistrict[this.legislatorIndex];
+      }
+
+      return legislator;
+    },
+    legislatorsInDistrict() {
+      let people = [];
+      if (this.legislators[this.selectedCity]) {
+        people = this.legislators[this.selectedCity][this.selectedDistrict];
+      }
+      return people;
     },
     districts() {
       if (this.legislators[this.selectedCity]) {
@@ -73,12 +96,21 @@ export default {
   data() {
     const cities = Object.keys(legislators);
     return {
+      legislatorIndex: 0,
       legislators,
       cities,
       districts: [],
       selectedCity: '臺北市',
       selectedDistrict: '',
     };
+  },
+  watch: {
+    selectedCity() {
+      this.legislatorIndex = 0;
+    },
+    selectedDistrict() {
+      this.legislatorIndex = 0;
+    },
   },
 };
 </script>

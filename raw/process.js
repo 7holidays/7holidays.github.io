@@ -20,7 +20,9 @@ converter.fromFile(csvFile, (err, data) => {
 
     item.district.split('、').forEach((district) => {
       if (!obj[city][district]) {
-        obj[city][district] = item;
+        obj[city][district] = [item];
+      } else {
+        obj[city][district].push(item);
       }
     });
   });
