@@ -22,7 +22,7 @@
       <div class="legislator-name">{{legislator.name}}</div>
       <div class="legislator-phone">{{legislator.labTel}}</div>
     </div>
-    <p v-if="legislator.party && legislator.party !== '民主進步黨'">
+    <p class="no-phone" v-if="legislator.party && legislator.party !== '民主進步黨'">
       你不需要打電話，他是 {{legislator.party}} 籍的立法委員
     </p>
     <div class="example" v-if="legislator.party === '民主進步黨'">
@@ -120,6 +120,10 @@ strong {
   right: 0;
   text-align: center;
   width: 100%;
+}
+
+.no-phone {
+  margin-top: 20px;
 }
 
 .legislator {
