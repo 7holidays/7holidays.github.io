@@ -23,7 +23,7 @@
       <h2>參考通話內容（點選可編輯）</h2>
       <div contenteditable>
         <p>
-          你好，請問是 <strong>{{legislator.name}}</strong> 委員的辦公室嗎？我是 <strong>{{selectedDistrict}}</strong> 的選民，我對民進黨強勢通過 <strong>砍七天假</strong> 版本的勞基法草案感到非常不滿。吳秉叡委員開記者會時說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」，請告訴 <strong>{{legislator.name}}</strong> 委員，如果委員不公開反對 <strong>砍七天假</strong> 的勞基法修法版本，在院會提案退回委員會以及二讀投反對票之類，我以後：
+          你好，請問是 <strong>{{legislator.name}}</strong> 委員的辦公室嗎？我是 <strong>{{selectedDistrict}}</strong> 的選民，我對民進黨強勢通過 <strong>砍七天假</strong> 版本的勞基法草案感到非常不滿。吳秉叡委員開記者會時說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」，請告訴 <strong>{{legislator.name}}</strong> 委員，如果委員不公開反對 <strong>砍七天假</strong> 的勞基法修法版本，在院會提案退回委員會以及二讀投反對票，我以後：
         </p>
         一、下次立委選舉絕對不會投給你<br>
         二、2018 縣長選舉也不會投給民進黨<br>
