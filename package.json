@@ -5,7 +5,9 @@
   "author": "Yuren Ju <yurenju@gmail.com>",
   "private": true,
   "scripts": {
+    "predev": "node raw/process.js",
     "dev": "node build/dev-server.js",
+    "prebuild": "node raw/process.js",
     "build": "node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
@@ -14,6 +16,7 @@
     "deploy": "node build/deploy.js"
   },
   "dependencies": {
+    "csvtojson": "^1.0.3",
     "shelljs": "^0.7.5",
     "vue": "^2.0.1"
   },
