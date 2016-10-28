@@ -5,12 +5,18 @@
       民進黨執意要在一例一休法案中，實際偷渡<strong>砍掉七天國定假日</strong>的修法，而吳秉叡更說出：「<strong>反對民進黨版勞基法 將來選舉可不投民進黨</strong>」！既然這樣，大家來打電話給自己選區的立法委員，告訴他們如果不公開<strong>砍掉七天國定假日</strong>的修法，下次立法委員選舉就照吳秉叡委員說的，再也不要支持民進黨了吧！
     </p>
     <h2>選擇你的選區</h2>
-    <select class="form-control cities" v-model="selectedCity">
-      <option v-for="city in cities" :value="city">{{city}}</option>
-    </select>
-    <select class="form-control districts" v-model="selectedDistrict">
-      <option v-for="district in districts" :value="district">{{district}}</option>
-    </select>
+    <form class="form-inline">
+      <div class="form-group">
+        <select class="form-control cities" v-model="selectedCity">
+          <option v-for="city in cities" :value="city">{{city}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select class="form-control districts" v-model="selectedDistrict">
+          <option v-for="district in districts" :value="district">{{district}}</option>
+        </select>
+      </div>
+    </form>
     <h2>你的選區立委是</h2>
     <div class="legislator">
       <div class="legislator-name">{{legislator.name}}</div>
@@ -25,8 +31,10 @@
         <p>
           你好，請問是 <strong>{{legislator.name}}</strong> 委員的辦公室嗎？我是 <strong>{{selectedDistrict}}</strong> 的選民，我對民進黨強勢通過 <strong>砍七天假</strong> 版本的勞基法草案感到非常不滿。吳秉叡委員開記者會時說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」，請告訴 <strong>{{legislator.name}}</strong> 委員，如果委員不公開反對 <strong>砍七天假</strong> 的勞基法修法版本，在院會提案退回委員會以及二讀投反對票，我以後：
         </p>
-        一、下次立委選舉絕對不會投給你<br>
-        二、2018 縣長選舉也不會投給民進黨<br>
+        <p>
+          一、下次立委選舉絕對不會投給你<br>
+          二、2018 縣長選舉也不會投給民進黨
+        </p>
         <p>
           請委員認真考慮選民的意見，公開反對 <strong>砍七天假</strong> 勞基法修法。
         </p>
@@ -82,6 +90,8 @@ h1, h2 {
 .main-section {
   max-width: 900px;
   margin: auto;
+  margin-top: 50px;
+  font-size: 1.2em;
 }
 
 strong {
@@ -96,8 +106,15 @@ strong {
   padding: 50px;
 }
 
+.example {
+  margin-bottom: 50px;
+}
+
 .footer {
-  position: absolute;
+  background: #EEE;
+  padding: 5px;
+  font-size: 0.8em;
+  position: fixed;;
   bottom: 0;
   left: 0;
   right: 0;
