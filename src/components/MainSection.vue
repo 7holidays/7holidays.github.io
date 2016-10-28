@@ -126,6 +126,7 @@ strong {
 
 .no-phone {
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .legislator {
