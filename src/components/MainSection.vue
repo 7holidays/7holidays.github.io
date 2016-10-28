@@ -1,5 +1,5 @@
 <template>
-  <div class="main-section">
+  <div class="main-section container">
     <h1>打電話給立委來表達你對<strong>砍七天假</strong>的不滿！</h1>
     <p>
       民進黨執意要在一例一休法案中，實際偷渡<strong>砍掉七天國定假日</strong>的修法，而吳秉叡更說出：「<strong>反對民進黨版勞基法 將來選舉可不投民進黨</strong>」！既然這樣，大家來打電話給自己選區的立法委員，告訴他們如果不公開<strong>砍掉七天國定假日</strong>的修法，下次立法委員選舉就照吳秉叡委員說的，再也不要支持民進黨了吧！
@@ -62,10 +62,12 @@ export default {
              empty;
     },
     districts() {
-      this.selectedDistrict = '';
-      return this.legislators[this.selectedCity] ?
-             Object.keys(this.legislators[this.selectedCity]) :
-             [];
+      if (this.legislators[this.selectedCity]) {
+        const districts = Object.keys(this.legislators[this.selectedCity]);
+        this.selectedDistrict = districts[0];
+        return districts;
+      }
+      return [];
     },
   },
   data() {
