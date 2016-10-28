@@ -20,7 +20,7 @@
     <h2>你的選區立委是</h2>
     <div class="legislator">
       <div class="legislator-name">{{legislator.name}}</div>
-      <div class="legislator-phone">{{legislator.labTel}}</div>
+      <div class="legislator-phone"><a :href="'tel:' + legislator.labTel">{{legislator.labTel}}</a></div>
     </div>
     <p class="no-phone" v-if="legislator.party && legislator.party !== '民主進步黨'">
       你不需要打電話，他是 {{legislator.party}} 籍的立法委員
