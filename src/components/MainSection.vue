@@ -41,11 +41,10 @@
       <h2>參考通話內容（點選可編輯）</h2>
       <div contenteditable>
         <p>
-          你好，請問是 <strong>{{legislator.name}}</strong> 委員的辦公室嗎？我是 <strong>{{selectedDistrict}}</strong> 的選民，我對民進黨強勢通過 <strong>砍七天假</strong> 版本的勞基法草案非常不滿。吳秉叡還說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」，請告訴 <strong>{{legislator.name}}</strong> 委員，如果委員不公開反對 <strong>砍七天假</strong> 的勞基法修法版本並在院會把法案撤銷或重付審查，我以後：
+          你好，請問是 <strong>{{legislator.name}}</strong> 委員的辦公室嗎？我是 <strong>{{selectedDistrict}}</strong> 的選民，我對民進黨強勢通過 <strong>砍七天假</strong> 版本的勞基法草案非常不滿。吳秉叡還說「如果反對民進黨版本勞基法草案，以後選舉可以不投民進黨」。
         </p>
         <p>
-          一、下次立委選舉絕對不會投給 <strong>{{legislator.name}}</strong><br>
-          二、2018 縣市長選舉也不會投給民進黨
+          請告訴 <strong>{{legislator.name}}</strong> 委員，如果砍七天假的勞基法通過，我以後在七天假返還以前都不會投給 <strong>{{legislator.name}}</strong> 和民進黨。
         </p>
         <p>
           請委員認真考慮選民的意見，公開反對 <strong>砍七天假</strong> 勞基法修法。
